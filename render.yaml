@@ -3,7 +3,7 @@ services:
     name: medical-qa-app
     env: node
     plan: free
-    branch: main
+    branch: master
     buildCommand: npm install
     startCommand: npm start
     envVars:
