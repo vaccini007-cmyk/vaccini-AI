@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical Q&A</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>Medical Q&A</h1>
+        <p>Chiedi all'assistente medico IA sugli effetti avversi dei vaccini e ricevi un report via email.</p>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <form id="qaForm" class="qa-form">
+        <label for="patientName">Nome</label>
+        <input id="patientName" name="patientName" type="text" placeholder="Mario Rossi" required />
+
+        <label for="patientEmail">Email</label>
+        <input id="patientEmail" name="patientEmail" type="email" placeholder="mario@example.com" required />
+
+        <label for="question">Domanda</label>
+        <textarea id="question" name="question" rows="6" placeholder="Scrivi qui la tua domanda sui vaccini..." required></textarea>
+
+        <button type="submit" id="submitButton">Invia domanda</button>
+      </form>
+
+      <section class="result-panel">
+        <div class="status-box" id="statusBox">Compila il modulo e invia la richiesta.</div>
+        <div class="answer-card" id="answerCard" hidden>
+          <h2>Risposta IA</h2>
+          <div id="aiResponse"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p>Il report verrà inviato alla tua email come documento riepilogativo.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

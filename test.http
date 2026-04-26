@@ -1,0 +1,40 @@
+### Test Endpoints for Medical Q&A API
+
+@baseUrl = http://localhost:3000
+@contentType = application/json
+
+### Health Check
+GET {{baseUrl}}/health
+
+### Q&A Service Status
+GET {{baseUrl}}/api/qa/status
+
+### Ask a Medical Question
+POST {{baseUrl}}/api/qa/ask
+Content-Type: {{contentType}}
+
+{
+  "question": "Quali sono gli effetti avversi comuni del vaccino anti-COVID?",
+  "patientName": "Mario Rossi",
+  "patientEmail": "mario.rossi@example.com"
+}
+
+### Another Example Question
+POST {{baseUrl}}/api/qa/ask
+Content-Type: {{contentType}}
+
+{
+  "question": "Ho paura degli effetti collaterali dei vaccini. Sono sicuri?",
+  "patientName": "Anna Bianchi",
+  "patientEmail": "anna.bianchi@example.com"
+}
+
+### Question about Vaccine Safety
+POST {{baseUrl}}/api/qa/ask
+Content-Type: {{contentType}}
+
+{
+  "question": "Quanto tempo impiega il corpo a produrre anticorpi dopo la vaccinazione?",
+  "patientName": "Giovanni Ferrari",
+  "patientEmail": "giovanni.ferrari@example.com"
+}

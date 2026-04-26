@@ -1,0 +1,141 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f6f8fb;
+  color: #1b1f23;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 100%);
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.app-header {
+  background: #1f2937;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+  margin-bottom: 24px;
+}
+
+.app-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+}
+
+.app-header p {
+  margin: 0;
+  line-height: 1.7;
+  max-width: 760px;
+}
+
+.app-main {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.qa-form,
+.result-panel {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+}
+
+.qa-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.qa-form input,
+.qa-form textarea {
+  width: 100%;
+  border: 1px solid #d2d6dc;
+  border-radius: 14px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #111827;
+  background: #fbfdff;
+}
+
+.qa-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.qa-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 16px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.qa-form button:hover {
+  background: #1d4ed8;
+}
+
+.status-box {
+  min-height: 100px;
+  padding: 18px;
+  border-radius: 16px;
+  border: 1px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #334155;
+}
+
+.answer-card {
+  margin-top: 24px;
+}
+
+.answer-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.answer-card div {
+  color: #111827;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+.app-footer {
+  margin-top: 24px;
+  padding: 18px 24px;
+  border-radius: 18px;
+  background: #f8fafc;
+  color: #475569;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .app-main {
+    grid-template-columns: 1fr;
+  }
+}
